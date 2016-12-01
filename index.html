@@ -159,41 +159,75 @@
             <div class="block">
                 <h3 class="sub-title text-center">LEPD | Linux Easy Profiling Daemon</h3>
                 <p><a href="https://github.com/linuxep/lepd" target="_blank">LEPD</a> is a daemon running on the server to be monitored</p>
-                <p>Here's is how to install and run LEPD</p>
+                <p>Quick Start</p>
                 <div class="code-block">
                     <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                    <pre><code class="language-markup">
+# Download the pre-built binaries:
+    - For X86:
+    curl -o lepd http://www.linuxep.com/binaries/x86-lepd
+    - For ARM:
+    curl -o lepd http://www.linuxep.com/binaries/arm-lepd                    
+
+# Run LEPD with root permission
+    sudo ./lepd &
+                     </code></pre>
+
+                    <p>Advanced Usage( for developers )</p>
+                    <div class="code-block">
+                        <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
                     <pre><code class="language-markup">
 # Clone the latest LEPD code from Github
     git clone https://github.com/linuxep/lepd
 
 # Build the binary
-    - For X86（libev-dev is required）:
-      ./build_x86.sh
-    - For ARM（arm-linux-gnueabi-gcc is required）:
-      ./build_arm.sh
+    - For X86:
+        apt-get install libev-dev 
+        apt-get install linux-tools-common linux-tools-generic linux-tools-`uname -r`
+        make ARCH=x86
+    - For ARM:
+        apt-get install gcc-arm-linux-gnueabi
+        make ARCH=arm
 
 # Run LEPD with root permission
-
-                     </code></pre>
+    sudo ./lepd &
+                    </code></pre>
                 </div><!--//code-block-->
             </div><!--//block-->
             
             <div class="block">
                 <h3 class="sub-title text-center">LEPV | Linux Easy Profiling Viewer</h3>
                 <p><a href="https://github.com/linuxep/lepv" target="_blank">LEPV</a> is a web-based viewer to present profiling data visually in real time</p>
+                <p>Quick Start</p>
                 <div class="code-block">
                     <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
                     <pre>
-<code class="language-css">
+<code class="language-markup">
+# Install Docker if you have not yet.
+    https://www.docker.com/
+    
+# Run the docker command below:
+    docker run -t -p 8889:8889 linuxep/lepv
+    
+# Now Open up your favorite browser and navigate to:
+    http://localhost:8889
+</code>
+                    </pre>
+                </div><!--//code-block-->
+                <p>Advanced Usage( for developers )</p>
+                <div class="code-block">
+                    <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                    <pre>
+<code class="language-markup">
 # Clone the latest LEPV code from Github
     git clone https://github.com/linuxep/lepv.git
-    
+
 # Run a script from root directory to build the Docker image
     ./buildDockerImage.sh
-    
+
 # Start a Docker container
     ./runDockerContainer.sh
-    
+
 # Now Open up your favorite browser and navigate to:
     http://localhost:8889
 </code>
@@ -202,7 +236,7 @@
             </div><!--//block-->
             
             </div><!--//docs-inner-->         
-        </div><!--//container-->
+        </div><!--//container--></div>
     </section><!--//features-->
 
     <section id="presentation" class="features section">
@@ -211,8 +245,8 @@
             <ul class="feature-list list-unstyled">
                 <li><i class="fa fa-check"></i> MDCC(Mobile Developer Conferance China) 2016, Beijing </li>
                 <li><i class="fa fa-check"></i> China Open Source Conferance 2016, Beijing</li>
-                <li><i class="fa fa-check"></i> CLK (China Linux Kernel) 2016, Shanghai <a href="media/CLK-2016-LEP.pptx" target="_blank"> Download Slides</a></li></li>
-                <li><i class="fa fa-download"></i> <a href="media/CLK-2016-LEP.pptx" target="_blank"> Download Slides</a></li>
+                <li><i class="fa fa-check"></i> CLK (China Linux Kernel) 2016, Shanghai <a href="media/LEP-introduction.pptx" target="_blank"> Download Slides</a></li></li>
+                <li><i class="fa fa-download"></i> <a href="media/LEP-introduction.pptx" target="_blank"> Download Slides</a></li>
             </ul>
         </div><!--//container-->
     </section><!--//features-->
