@@ -42,19 +42,16 @@
                     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
                     </button><!--//nav-toggle-->
                 </div><!--//navbar-header-->            
                 <div class="navbar-collapse collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
-                        <li class="nav-item"><a class="scrollto" href="#about">About</a></li>
-                        <li class="nav-item"><a class="scrollto" href="#features">Features</a></li>
-                        <li class="nav-item"><a class="scrollto" href="#docs">Docs</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#about">Features</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#faqs">FAQ</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#tutorial">Tutorial</a></li>
                         <li class="nav-item"><a class="scrollto" href="#presentation">Presentations</a></li>
-                        <li class="nav-item"><a class="scrollto" href="#license">License</a></li>
-                        <li class="nav-item last"><a class="scrollto" href="#contact">Contact</a></li>
+                        <li class="nav-item last"><a class="scrollto" href="#about">About</a></li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
             </nav><!--//main-nav-->
@@ -65,19 +62,20 @@
     <section id="promo" class="promo section offset-header">
         <div class="container text-center">
             <h2 class="title"><span class="highlight">L</span>inux <span class="highlight">E</span>asy <span class="highlight">P</span>rofiling</h2>
-            <p class="intro">An open-sourced, all-in-one toolbox for Linux performance profiling and visualization</p>
+            <p class="intro">An open-sourced all-in-one toolbox</p>
+            <p class="intro">for Linux performance profiling & visualization</p>
             <div class="btns">
                 <a class="btn btn-cta-secondary" href="http://www.linuxep.com:8889" target="_blank">Demo</a>
                 <a class="btn btn-cta-primary" href="https://github.com/linuxep" target="_blank">View on GitHub</a>
             </div>
         </div><!--//container-->
+        <br/>
     </section><!--//promo-->
     
     <!-- ******ABOUT****** --> 
     <section id="about" class="about section">
         <div class="container">
-            <h2 class="title text-center">What is LEP?</h2>
-            <p class="intro text-center">An open-sourced, all-in-one toolbox for Linux performance profiling and visualization</p>
+            <h2 class="title text-center">Features</h2>
             <div class="row">
                 <div class="item col-md-4 col-sm-6 col-xs-12">
                     <div class="icon-holder">
@@ -85,7 +83,7 @@
                     </div>
                     <div class="content">
                         <h3 class="sub-title">C/S</h3>
-                        <p>Client/Server architecture</p>
+                        <p>Friendly for embedded board</p>
                     </div><!--//content-->
                 </div><!--//item-->
                 <div class="item col-md-4 col-sm-6 col-xs-12">
@@ -109,11 +107,11 @@
                 <div class="clearfix visible-md"></div>    
                 <div class="item col-md-4 col-sm-6 col-xs-12">
                     <div class="icon-holder">
-                        <i class="fa fa-tablet"></i>
+                        <i class="fa fa-clock-o"></i>
                     </div>
                     <div class="content">
-                        <h3 class="sub-title">Dockerized</h3>
-                        <p>LEPV is dockerized, no worries for the daunting network environment configurations</p>
+                        <h3 class="sub-title">Realtime</h3>
+                        <p>Data presented in real time</p>
                     </div><!--//content-->
                 </div><!--//item-->                
                 <div class="item col-md-4 col-sm-6 col-xs-12">
@@ -131,34 +129,58 @@
                     </div>
                     <div class="content">
                         <h3 class="sub-title">Restful API Available</h3>
-                        <p>Performance data are exposed by Restful API which provides for great extensibility </p>
+                        <p>Restful API provided for extensibility </p>
                     </div><!--//content-->
-                </div><!--//item-->               
+                </div><!--//item-->
+                <div class="clearfix visible-md"></div>
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-tablet"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Dockerized</h3>
+                        <p>Dockerized for easy use</p>
+                    </div><!--//content-->
+                </div><!--//item-->
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-github"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Open Source</h3>
+                        <p>Open sourced and free to use</p>
+                    </div><!--//content-->
+                </div><!--//item-->
             </div><!--//row-->            
         </div><!--//container-->
     </section><!--//about-->
     
     <!-- ******FEATURES****** --> 
-    <section id="features" class="features section">
+    <section id="faqs" class="features section">
         <div class="container text-center">
-            <h2 class="title">Features</h2>
+            <h2 class="title">FAQ</h2>
             <ul class="feature-list list-unstyled">
-                <li><i class="fa fa-check"></i> Client / Server </li>
-                <li><i class="fa fa-check"></i> Visualization</li>
-                <li><i class="fa fa-check"></i> Real time</li>
-                <li><i class="fa fa-check"></i> Open Source</li>
+                <li><i class="fa fa-question-circle"></i> Does it support Android?</li>
+                <li><i class="fa fa-commenting"></i> Yes, it supports both Android and Linux</li>
+                <br/>
+                
+                <li><i class="fa fa-question-circle"></i> Does it support ARM?</li>
+                <li><i class="fa fa-commenting"></i> Yes, it supports both X86 and ARM</li>
+                <br/>
+                
+                <li><i class="fa fa-question-circle"></i> Is LEP free to use?</li>
+                <li><i class="fa fa-commenting"></i> Yes, it's GPL V2 licensed, anyone can use or modify it everywhere without any restrictions.</li>
             </ul>
         </div><!--//container-->
     </section><!--//features-->
     
     <!-- ******DOCS****** --> 
-    <section id="docs" class="docs section">
+    <section id="tutorial" class="docs section">
         <div class="container">
             <div class="docs-inner">
-            <h2 class="title text-center">Get Started</h2>            
+            <h2 class="title text-center">Tutorial</h2>            
             <div class="block">
-                <h3 class="sub-title text-center">LEPD | Linux Easy Profiling Daemon</h3>
-                <p><a href="https://github.com/linuxep/lepd" target="_blank">LEPD</a> is a daemon running on the server to be monitored</p>
+                <p><a href="https://github.com/linuxep/lepd" target="_blank">LEPD (LEP Daemon)</a> is a daemon running on the server to be monitored</p>
                 <p>Quick Start</p>
                 <div class="code-block">
                     <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
@@ -195,9 +217,9 @@
                 </div><!--//code-block-->
             </div><!--//block-->
             
+                <br/>
             <div class="block">
-                <h3 class="sub-title text-center">LEPV | Linux Easy Profiling Viewer</h3>
-                <p><a href="https://github.com/linuxep/lepv" target="_blank">LEPV</a> is a web-based viewer to present profiling data visually in real time</p>
+                <p><a href="https://github.com/linuxep/lepv" target="_blank">LEPV (LEP Viewer)</a> is a web-based viewer to present profiling data visually in real time</p>
                 <p>Quick Start</p>
                 <div class="code-block">
                     <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
@@ -250,45 +272,30 @@
             </ul>
         </div><!--//container-->
     </section><!--//features-->
-    
-    <!-- ******LICENSE****** --> 
-    <section id="license" class="license section">
-        <div class="container">
-            <div class="license-inner">
-            <h2 class="title text-center">License</h2>
-                
-                <div class="cta-container">
-                    <div class="btn-container  text-center">
-                        <a href="http://choosealicense.com/licenses/gpl-2.0/"><h2>GNU General Public License v2.0</h2></a>
-                        <p>Anyone can use or modify LEP everywhere, without any restrictions.</p>
-                        <p>However, if you ever make changes to LEP and want to distribute it, it must be distributed with full source code with same license</p>
-                    </div><!--//btn-container-->
-                </div><!--//cta-container-->
-            </div><!--//license-inner-->
-        </div><!--//container-->
-    </section><!--//how-->
 
     <!-- ******CONTACT****** --> 
-    <section id="contact" class="contact section has-pattern">
+    <section id="about" class="docs section has-pattern">
         <div class="container">
             <div class="contact-inner">
-                <h2 class="title  text-center">Contact</h2>
+                <h2 class="title  text-center">About</h2>
+
                 <p class="intro  text-center">
-                    Hope you feel this project useful.<br/>
-                    Feel free to get in touch if you have any questions or suggestions.<br/>
-                    <br/>
                     LEP project is launched and maintained by:
                 </p>
-
+                
                 <ul class="feature-list list-unstyled text-center">
                     <li><i class="fa fa-envelope"></i> <a href="mailto:21cnbao@gmail.com" target="_top">Barry Song</a> </li>
                     <li><i class="fa fa-envelope"></i> <a href="mailto:lliubbo@gmail.com" target="_top">Bob Liu</a> </li>
                     <li><i class="fa fa-envelope"></i> <a href="mailto:shinyxxn@hotmail.com" target="_top">Mac Xu</a> </li>
                 </ul>
+
+                <p class="intro  text-center">
+                    Hope you feel this project useful.<br/>
+                    Feel free to get in touch if you have any questions or suggestions.<br/>
+                </p>
+                
             </div><!--//contact-inner-->
 
-            
-            
         </div><!--//container-->
     </section><!--//contact-->  
       
