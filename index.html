@@ -47,7 +47,7 @@
                 <div class="navbar-collapse collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
-                        <li class="nav-item"><a class="scrollto" href="#about">Features</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#features">Features</a></li>
                         <li class="nav-item"><a class="scrollto" href="#faqs">FAQ</a></li>
                         <li class="nav-item"><a class="scrollto" href="#tutorial">Tutorial</a></li>
                         <li class="nav-item"><a class="scrollto" href="#presentation">Presentations</a></li>
@@ -73,7 +73,7 @@
     </section><!--//promo-->
     
     <!-- ******ABOUT****** --> 
-    <section id="about" class="about section">
+    <section id="features" class="about section">
         <div class="container">
             <h2 class="title text-center">Features</h2>
             <div class="row">
@@ -151,6 +151,19 @@
                         <p>Open sourced and free to use</p>
                     </div><!--//content-->
                 </div><!--//item-->
+
+                <br/>
+                
+                <div class="text-center">
+                    <div>
+                        <img src="media/architecture.png" alt="LEP Architecture Diagram">
+                    </div>
+
+                    <br/>
+                    <div>
+                        <img src="media/dataflow.png" alt="LEP Dataflow Diagram">
+                    </div>
+                </div>
             </div><!--//row-->            
         </div><!--//container-->
     </section><!--//about-->
@@ -180,12 +193,12 @@
             <div class="docs-inner">
             <h2 class="title text-center">Tutorial</h2>            
             <div class="block">
-                <p><a href="https://github.com/linuxep/lepd" target="_blank">LEPD (LEP Daemon)</a> is a daemon running on the server to be monitored</p>
                 <p>Quick Start</p>
                 <div class="code-block">
                     <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
                     <pre><code class="language-markup">
-# Download the pre-built binaries:
+[LEPD (LEP Daemon)]:
+# Download the pre-built LEPD binaries:
     - For X86:
     curl -o lepd http://www.linuxep.com/binaries/x86-lepd
     - For ARM:
@@ -193,12 +206,24 @@
 
 # Run LEPD with root permission
     sudo ./lepd &
+
+[LEPV (LEP Viewer)]:
+# Install Docker if you have not yet.
+https://www.docker.com/
+
+# Run the docker command below:
+docker run -t -p 8889:8889 linuxep/lepv
+
+# Now Open up your favorite browser and navigate to:
+http://localhost:8889                        
                      </code></pre>
 
+                    <br/>
                     <p>Advanced Usage( for developers )</p>
                     <div class="code-block">
                         <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
                     <pre><code class="language-markup">
+[LEPD (LEP Daemon)]:
 # Clone the latest LEPD code from Github
     git clone https://github.com/linuxep/lepd
 
@@ -213,61 +238,23 @@
 
 # Run LEPD with root permission
     sudo ./lepd &
+                        
+[LEPV (LEP Viewer]:
+# Clone the latest LEPV code from Github
+git clone https://github.com/linuxep/lepv.git
+
+# Run a script from root directory to build the Docker image
+./buildDockerImage.sh
+
+# Start a Docker container
+./runDockerContainer.sh
+
+# Now Open up your favorite browser and navigate to:
+http://localhost:8889
                     </code></pre>
                 </div><!--//code-block-->
             </div><!--//block-->
             
-                <br/>
-            <div class="block">
-                <p><a href="https://github.com/linuxep/lepv" target="_blank">LEPV (LEP Viewer)</a> is a web-based viewer to present profiling data visually in real time</p>
-                <p>Quick Start</p>
-                <div class="code-block">
-                    <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
-                    <pre>
-<code class="language-markup">
-# Install Docker if you have not yet.
-    https://www.docker.com/
-    
-# Run the docker command below:
-    docker run -t -p 8889:8889 linuxep/lepv
-    
-# Now Open up your favorite browser and navigate to:
-    http://localhost:8889
-</code>
-                    </pre>
-                </div><!--//code-block-->
-                <p>Advanced Usage( for developers )</p>
-                <div class="code-block">
-                    <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
-                    <pre>
-<code class="language-markup">
-# Clone the latest LEPV code from Github
-    git clone https://github.com/linuxep/lepv.git
-
-# Run a script from root directory to build the Docker image
-    ./buildDockerImage.sh
-
-# Start a Docker container
-    ./runDockerContainer.sh
-
-# Now Open up your favorite browser and navigate to:
-    http://localhost:8889
-</code>
-                    </pre>
-                </div><!--//code-block-->
-
-                <br/>
-                <p>LEP Architecture</p>
-                <div>
-                    <img src="media/architecture.png" alt="LEP Architecture Diagram">
-                </div>
-
-                <br/>
-                <p>LEP Dataflow</p>
-                <div>
-                    <img src="media/dataflow.png" alt="LEP Dataflow Diagram">
-                </div>
-            </div><!--//block-->
             
             </div><!--//docs-inner-->         
         </div><!--//container--></div>
@@ -277,8 +264,8 @@
         <div class="container text-center">
             <h2 class="title">Presented at</h2>
             <ul class="feature-list list-unstyled">
-                <li><i class="fa fa-check"></i> MDCC(Mobile Developer Conferance China) 2016, Beijing </li>
-                <li><i class="fa fa-check"></i> China Open Source Conferance 2016, Beijing</li>
+                <li><i class="fa fa-check"></i> MDCC(Mobile Developer Conference China) 2016, Beijing </li>
+                <li><i class="fa fa-check"></i> China Open Source Conference 2016, Beijing</li>
                 <li><i class="fa fa-check"></i> CLK (China Linux Kernel) 2016, Shanghai <a href="media/LEP-introduction.pptx" target="_blank"> Download Slides</a></li></li>
                 <li><i class="fa fa-download"></i> <a href="media/LEP-introduction.pptx" target="_blank"> Download Slides</a></li>
             </ul>
